@@ -112,31 +112,8 @@ the Credentials window.
 . Fill in the fields to identify the repository you are mirroring in your new repository:
 
 +
-* **Registry URL**: Location of the container registry you want to mirror from.
-+
-* **User or Organization**: Typically, the account name associated with the
-content you are mirroring.
-For example, with the image registry.example.com/jsmith/myimage:latest, jsmith would be entered here.
-+
-* **Repository Name**: The name identifying the name of the set of images.
-For example, with the image registry.example.com/jsmith/myimage:latest, myimage would be entered here.
-+
-* **Sync Interval**: Defaults to syncing every 24 hours. You can change that based on hours or days.
-+
-* **Robot User**: Select the robot account you created earlier to do the mirroring.
-+
-* **Username**: The username for logging into the external registry holding the repository you are mirroring.
-+
-* **Password**: The password associated with the Username. Note that the password
-cannot include characters that require an escape character (\).
-+
-* **Start Date**: The date on which mirroring begins. The current date and time used by default.
-+
-* **Verify TLS**: Check this box if you want to verify the authenticity of the external registry.
-Uncheck this box if, for example, you set up {productname} for testing with a self-signed certificate
-or no certificate.
-+
-* **HTTP Proxy**: Identify the proxy server needed to access the remote site, if one is required.
+* **Registry Location**: Container repository you want to mirror from, including registry, namespace, and repository.
+For example, registry.example.com/jsmith/myimage.
 +
 * **Tags**: This field is required. You may enter a comma-separated list of individual tags or
 tag patterns. (See _Tag Patterns_ section for details.)
@@ -147,6 +124,23 @@ At least one Tag must be explicitly entered (ie. not a tag pattern) _or_ the tag
 exist in the remote repository. This is required for Quay to get the list of tags in the remote
 repository to compare to the specified list to mirror.
 ====
++
+* **Start Date**: The date on which mirroring begins. The current date and time used by default.
++
+* **Sync Interval**: Defaults to syncing every 24 hours. You can change that based on hours or days.
++
+* **Robot User**: Select the robot account you created earlier to do the mirroring. A choice is presented here to create a new robot account.
++
+* **Username**: The username for logging into the external registry holding the repository you are mirroring.
++
+* **Password**: The password associated with the Username. Note that the password
+cannot include characters that require an escape character (\).
++
+* **Verify TLS**: Check this box if you want to verify the authenticity of the external registry.
+Uncheck this box if, for example, you set up {productname} for testing against an external
+registry with a self-signed certificate or no certificate.
++
+* **HTTP Proxy, HTTPs Proxy, No Proxy**: Identify the proxy server needed to access the external registry, if one is required.
 +
 Here is an example of a completed Repository Mirroring screen:
 +
